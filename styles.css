@@ -1,0 +1,227 @@
+/* Define Color Variables */
+:root {
+    --primary-color: #2C3E50; /* Dark Blue-Grey */
+    --secondary-color: #2C3E50; /* Dark Blue-Grey */
+    --accent-color: #ECF0F1; /* Light Grey */
+    --footer-color: #34495E; /* Darker Blue-Grey */
+    --button-color: #2C3E50; /* Blue */
+}
+
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* Header Styles with Fade-in Animation */
+header {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 20px;
+    text-align: center;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Optional: Start slightly above and move down */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Call-to-Action Button Styles with Scale-up Animation */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Apply transition for smooth scale effect */
+}
+
+.cta-button:hover {
+    transform: scale(1.05); /* Scale-up on hover */
+}
+
+/* Main Section Styles */
+section {
+    padding: 40px;
+}
+#home h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+#home p {
+    margin-bottom: 15px;
+}
+
+#home ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#home li {
+    margin-bottom: 8px;
+}
+
+
+/* Services Section Styles */
+#testimonials {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+/* Testimonials Styles */
+#testimonials {
+    padding: 40px;
+}
+
+#testimonials h2,
+#testimonials p {
+    margin-bottom: 20px;
+}
+
+
+/* Testimonials Styles with Fade-in Animation */
+.testimonial {
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+
+.divider {
+    height: 1px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial .client {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Form Input Styles */
+input,
+textarea {
+    width: calc(100% - 20px); /* Reduce the width to leave space for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 8px; /* Smaller margin between inputs and labels */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    display: block; /* Ensure each input appears on a new line */
+}
+
+/* Full-width input for the message */
+textarea {
+    width: calc(100% - 20px);
+}
+
+
+/* Contact Form with Fade-in Animation */
+#contact {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    padding: 40px;
+}
+
+/* Contact Form Input Styles with Fade-in Animation */
+.form-not-message input,
+.form-not-message textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    display: block;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Full-width input for the message with Fade-in Animation */
+textarea {
+    width: calc(100% - 20px);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Larger Submit Button with Fade-in Animation */
+button {
+    background-color: var(--button-color);
+    color: var(--accent-color);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adjust the grid layout for smaller screens */
+@media screen and (max-width: 600px) {
+    form {
+        grid-template-columns: 1fr; /* Switch to a single column for smaller screens */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--footer-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    /* Adjust styles for smaller screens if needed */
+    header {
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 5px;
+    }
+}
