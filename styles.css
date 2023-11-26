@@ -5,6 +5,7 @@
     --accent-color: #ECF0F1; /* Light Grey */
     --footer-color: #34495E; /* Darker Blue-Grey */
     --button-color: #2C3E50; /* Blue */
+    --other: #EEF0E8
 }
 
 /* Reset some default styles */
@@ -19,15 +20,87 @@ body {
     color: #333;
 }
 
-
-/* Header Styles with Fade-in Animation */
-header {
+#banner {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(44, 62, 80, 0) 0%, rgba(44, 62, 80, 0.7) 20%, rgba(44, 62, 80, 0.7) 80%, rgba(44, 62, 80, 0) 100%), url("./bg4.jpeg");
+    background-color: #f2f2f2;
+    background-size: cover;
+    background-position: center;
+    font-size: 30px;
+    color: white;
+    text-align: center; /* Center-align the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--secondary-color);
     color: var(--accent-color);
-    padding: 20px;
     text-align: center;
     opacity: 0; /* Set initial opacity to 0 */
     animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
+}
+/* Header Styles with Fade-in Animation */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end of the header */
+    font-size: 16px;
+    color:white;
+    font-size: 20px;
+
+}
+
+.nav-logo {
+    padding: 10px 20px;
+    margin-left: 20px;
+}
+.nav-logo p {
+    margin: 0;
+}
+
+nav {
+    height: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+nav li {
+    margin-right: 20px;
+    padding: 10px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+nav li:hover {
+
+    background-color: white;
+}
+
+nav li:hover > a {
+    color: var(--secondary-color);
 }
 
 @keyframes fadeIn {
@@ -42,36 +115,100 @@ header {
 }
 
 /* Call-to-Action Button Styles with Scale-up Animation */
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--button-color);
-    color: var(--accent-color);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: transform 0.3s ease; /* Apply transition for smooth scale effect */
-}
-
-.cta-button:hover {
-    transform: scale(1.05); /* Scale-up on hover */
-}
 
 /* Main Section Styles */
 section {
     padding: 40px;
 }
+.side {
+    display: flex;
+    justify-content: space-between; /* Distribute items to the start and end of the container */
+    align-items: center; /* Center items vertically */
+    padding: 50px; /* Add padding for spacing */
+}
+
+.left, .right {
+    width: 45%; /* Adjust the width as needed */
+}
+
+.left h2 {
+     font-size: 80px;
+ }
+ .left p {
+     font-size: 16px;
+ }
+
+
+ .left {
+     text-align: right;
+ }
+
+.right {
+    text-align: left; /* Align text to the left in the "right" div */
+}
+
+.left.b {
+     text-align: left;
+ }
+
+.client {
+    text-align: right; /* Align text to the left in the "right" div */
+}
+
+.cta-button-div {
+    text-align: center; /* Center-align the button */
+    width: 100%; /* Make the button div take up the full width */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.cta-button-div{
+    text-align: center; /* Center-align the text */
+    margin-top: 30px;
+}
+
+.cta-button-div .cta-button {
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Apply transition for smooth scale effect */
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+.cta-button:hover {
+    transform: scale(1.05); /* Scale-up on hover */
+}
+
+hr.styled-hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd; /* Light grey color */
+    margin: 20px 0;
+}
+
+#home {
+    background-color: var(--other);
+}
 #home h2 {
-    font-size: 1.8em;
+    font-size: 2.4em;
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
+}
+
+#home h3 {
+    font-size: 1.6em;
 }
 
 #home p {
     margin-bottom: 15px;
 }
 
-#home ul {
+#home ul ul {
     list-style-type: disc;
     margin-left: 20px;
 }
@@ -86,6 +223,12 @@ section {
     background-color: var(--primary-color);
     color: var(--accent-color);
 }
+#testimonials h2 {
+    font-size: 2.4em;
+}
+.test-text {
+    font-size: 1.4em;
+}
 
 /* Testimonials Styles */
 #testimonials {
@@ -97,6 +240,9 @@ section {
     margin-bottom: 20px;
 }
 
+ul{
+    list-style-type: none;
+}
 
 /* Testimonials Styles with Fade-in Animation */
 .testimonial {
@@ -199,6 +345,11 @@ button {
     }
 }
 
+#experience h2 {
+    animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
+    text-align: center;
+}
+
 /* Footer Styles */
 footer {
     background-color: var(--footer-color);
@@ -225,3 +376,15 @@ footer {
         padding: 5px;
     }
 }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px; /* Adjust the margin as needed */
+        }
+
+        img {
+            width: 180px; /* Adjust the width as needed */
+            height: auto;
+            margin: 10px; /* Adjust the margin as needed */
+        }
